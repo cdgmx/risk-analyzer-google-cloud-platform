@@ -1,0 +1,5 @@
+# Runtime dependencies — install in production environments
+google-auth==2.29.0
+google-cloud-notebooks==1.11.0
+google-cloud-storage==2.16.0
+google-cloud-resource-manager==1.12.3
