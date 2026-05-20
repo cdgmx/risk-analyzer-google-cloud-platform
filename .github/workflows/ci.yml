@@ -21,17 +21,17 @@ jobs:
         run: bandit -r src/ -ll -ii
 
   dependency-scan:
-    name: Dependency Scan (Safety)
+    name: Dependency Scan (pip-audit)
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      - name: Install Safety
-        run: pip install 'safety==2.3.5'
-      - name: Run Safety
-        run: safety check -r requirements.txt
+      - name: Install pip-audit
+        run: pip install pip-audit
+      - name: Run pip-audit
+        run: pip-audit -r requirements.txt
 
   test:
     name: Tests + Coverage
