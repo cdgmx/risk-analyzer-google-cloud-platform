@@ -29,7 +29,7 @@ jobs:
         with:
           python-version: "3.11"
       - name: Install Safety
-        run: pip install safety>=3.0
+        run: pip install 'safety>=2.3.5,<3.0'
       - name: Run Safety
         run: safety check -r requirements.txt
 
